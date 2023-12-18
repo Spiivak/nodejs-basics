@@ -13,8 +13,8 @@ function downloadCountryFlags() {
 function getCountries() {
   const countries = utilService.readJsonFile('./newCountries.json')
 
-  const sortedCountries = countries.sort((countryA, countryB) => countryA.population - countryB.population)
-  const top5Countries = sortedCountries.splice(1, 5)
+  const sortedCountries = countries.sort((countryA, countryB) => countryB.population - countryA.population)
+  const top5Countries = sortedCountries.splice(0, 5)
 
   return top5Countries
 }
